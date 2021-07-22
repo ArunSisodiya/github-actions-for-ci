@@ -30,6 +30,11 @@ jobs:
       run: |
         npm install
         npm run build
+    - name: Upload artifacts to Public
+      uses: actions/upload-artifact@main
+      with:
+        name: webpack artifacts
+        path: public/
 
   test:
     runs-on: ubuntu-latest
